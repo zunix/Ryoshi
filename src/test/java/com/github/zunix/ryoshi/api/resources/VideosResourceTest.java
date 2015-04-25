@@ -27,7 +27,7 @@ public class VideosResourceTest {
   public void initialize() {
     clientID = "";
     httpClient = new OkHttpClient();
-    ryoshi = new Ryoshi(clientID);
+    ryoshi = new Ryoshi(clientID,false);
   }
 
   /**

@@ -29,7 +29,7 @@ public class IngestsResourceTest {
     clientID = "";
     expectedResultsURI = "https://api.twitch.tv/kraken/ingests";
     httpClient = new OkHttpClient();
-    ryoshi = new Ryoshi(clientID);
+    ryoshi = new Ryoshi(clientID,false);
     request = new Request.Builder()
         .url(expectedResultsURI)
         .header("Accept", "application/vnd.twitchtv.v3+json")

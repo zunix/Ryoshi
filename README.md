@@ -49,7 +49,7 @@ First we need to initialize **Ryoshi**.
 
 ```java
 
-Ryoshi ryoshi = new Ryoshi();
+Ryoshi ryoshi = new Ryoshi(false);
 
 ```
 
@@ -61,7 +61,7 @@ you wanna perform these parameters are required.
 ```java
 
 String clientID = "twitch-clientId";
-Ryoshi ryoshi = new Ryoshi(clientID);
+Ryoshi ryoshi = new Ryoshi(clientID, false);
 
 ```
 *Note: Twitch require you to send your application's  __client_id__ with every request you make to ensure that your application is not rate limited.*
@@ -72,10 +72,13 @@ Ryoshi ryoshi = new Ryoshi(clientID);
 
 String clientID = "twitch-clientId";
 String accessToken = "user-accessToken";
-Ryoshi ryoshi = new Ryoshi(clientID, accessToken);
+Ryoshi ryoshi = new Ryoshi(clientID, accessToken, false);
 
 ```
 
+#####Logging
+
+**not done**
 
 ###Requesting data from the Twitch API.
 
@@ -86,7 +89,7 @@ After initializing **Ryoshi** we can now request data from the Twitch API.
 import com.github.zunix.ryoshi.api.models.Team;
 
 String clientID = "twitch-clientId";
-Ryoshi ryoshi = new Ryoshi(clientID);
+Ryoshi ryoshi = new Ryoshi(clientID, false);
 
 // Returns a Team object if Team "example" exist.
 Team exampleTeam = ryoshi.team().getTeamByName("example");
@@ -128,7 +131,7 @@ out the project's [Wiki](https://github.com/zunix/Ryoshi/wiki)
 - Ingests
 - Root
 - ~~Search~~
-- ~~Streams~~
+- Streams
 - ~~Subscriptions~~
 - Teams
 - Users

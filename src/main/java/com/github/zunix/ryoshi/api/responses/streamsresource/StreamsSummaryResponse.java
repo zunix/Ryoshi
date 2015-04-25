@@ -14,63 +14,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.zunix.ryoshi.api.models;
+package com.github.zunix.ryoshi.api.responses.streamsresource;
 
 import com.google.gson.annotations.SerializedName;
 
 import com.github.zunix.ryoshi.api.models.links.SelfLink;
 
-public class Stream {
+public class StreamsSummaryResponse {
 
-  @SerializedName("_id")
-  private long id;
-  private String game;
-  private int viewers;
-  @SerializedName("created_at")
-  private String createdAt;
-  @SerializedName("video_height")
-  private int videoHeight;
-  @SerializedName("average_fps")
-  private double averageFPS;
+  private long channels;
+  private long viewers;
   @SerializedName("_links")
   private SelfLink links;
-  private Preview preview;
-  private Channel channel;
 
-  public long getId() {
-    return id;
+  public long getChannels() {
+    return channels;
   }
 
-  public String getGame() {
-    return game;
-  }
-
-  public int getViewers() {
+  public long getViewers() {
     return viewers;
-  }
-
-  public String getCreatedAt() {
-    return createdAt;
-  }
-
-  public int getVideoHeight() {
-    return videoHeight;
-  }
-
-  public double getAverageFPS() {
-    return averageFPS;
   }
 
   public SelfLink getLinks() {
     return links;
   }
-
-  public Preview getPreview() {
-    return preview;
-  }
-
-  public Channel getChannel() {
-    return channel;
-  }
 }
-

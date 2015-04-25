@@ -27,7 +27,7 @@ public class GamesResourceTest {
     clientID = "";
     expectedResultsURI = "https://api.twitch.tv/kraken/games/top?limit=5&offset=1";
     httpClient = new OkHttpClient();
-    ryoshi = new Ryoshi(clientID);
+    ryoshi = new Ryoshi(clientID,false);
     request = new Request.Builder()
         .url(expectedResultsURI)
         .header("Accept", "application/vnd.twitchtv.v3+json")

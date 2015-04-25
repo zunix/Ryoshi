@@ -29,7 +29,7 @@ public class UsersResourceTest {
   public void initialize() {
     clientID = "";
     accessToken = "";
-    ryoshi = new Ryoshi(clientID,accessToken);
+    ryoshi = new Ryoshi(clientID,accessToken,false);
     httpClient = new OkHttpClient();
   }
 

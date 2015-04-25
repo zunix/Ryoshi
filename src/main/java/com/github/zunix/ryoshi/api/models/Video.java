@@ -45,7 +45,7 @@ public class Video {
   @SerializedName("_links")
   private ChannelLink links;
   @SerializedName("channel")
-  private Channel channel;
+  private UserChannel channel;
 
   public String getTitle() {
     return title;
@@ -111,7 +111,7 @@ public class Video {
     return links;
   }
 
-  public Channel getChannel() {
+  public UserChannel getChannel() {
     return channel;
   }
 }
