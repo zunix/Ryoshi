@@ -110,7 +110,7 @@ or send data to. After that call, you have access to the available methods from 
 Ryoshi ryoshi = new Ryoshi();
 
 // Directs to Ingests endpoint and then calls the method from that endpoint.
-twitchAPI.ingests().getIngests();
+ryoshi.ingests().getIngests();
 
 
 ```
