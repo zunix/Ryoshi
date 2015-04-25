@@ -124,7 +124,7 @@ out the project's [Wiki](https://github.com/zunix/Ryoshi/wiki)
 - ~~Channels~~
 - ~~Chat~~
 - ~~Follows~~
-- ~~Games~~
+- Games
 - Ingests
 - Root
 - ~~Search~~

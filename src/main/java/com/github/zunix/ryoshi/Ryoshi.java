@@ -17,8 +17,10 @@
 package com.github.zunix.ryoshi;
 
 import com.github.zunix.ryoshi.api.errorhandlers.TwitchErrorHandler;
+import com.github.zunix.ryoshi.api.resources.GamesResource;
 import com.github.zunix.ryoshi.api.resources.IngestsResource;
 import com.github.zunix.ryoshi.api.resources.RootResource;
+import com.github.zunix.ryoshi.api.resources.StreamsResource;
 import com.github.zunix.ryoshi.api.resources.TeamResource;
 import com.github.zunix.ryoshi.api.resources.UsersResource;
 import com.github.zunix.ryoshi.api.resources.VideosResource;
@@ -55,6 +57,8 @@ public class Ryoshi {
   private VideosResource videosResource;
   private RootResource rootResource;
   private UsersResource usersResource;
+  private GamesResource gamesResource;
+  private StreamsResource streamsResource;
 
 
   public Ryoshi() {
@@ -103,12 +107,26 @@ public class Ryoshi {
    */
   public UsersResource users() { return usersResource; }
 
+  /**
+   *
+   * @return GameResource Interface
+   */
+  public GamesResource games() { return gamesResource; }
+
+  /**
+   *
+   * @return StreamResource Interface
+   */
+  public StreamsResource streams() { return streamsResource;}
+
   private void initResources() {
     ingestsResource = restAdapter.create(IngestsResource.class);
     teamResource = restAdapter.create(TeamResource.class);
     videosResource = restAdapter.create(VideosResource.class);
     rootResource = restAdapter.create(RootResource.class);
     usersResource = restAdapter.create(UsersResource.class);
+    gamesResource = restAdapter.create(GamesResource.class);
+    streamsResource = restAdapter.create(StreamsResource.class);
   }
 
 
