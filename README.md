@@ -122,17 +122,17 @@ out the project's [Wiki](linkhere)
 
 - ~~Blocks~~
 - ~~Channels~~
-- Chat
+- ~~Chat~~
 - ~~Follows~~
-- Games
+- ~~Games~~
 - Ingests
-- Root
+- ~~Root~~
 - ~~Search~~
 - ~~Streams~~
 - ~~Subscriptions~~
-- Teams
+- ~~Teams~~
 - ~~Users~~
-- Videos
+- ~~Videos~~
 
 License
 =======
