@@ -97,7 +97,7 @@ Team exampleTeam = ryoshi.team().getTeamByName("example");
 
 ###Sending data to the Twitch API.
 
-*not done*
+**not done**
 
 
 As you can see the **Ryoshi** follows a simple method chaining pattern.
