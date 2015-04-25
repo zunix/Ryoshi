@@ -115,7 +115,7 @@ ryoshi.ingests().getIngests();
 
 ```
 For more information about all endpoints provided by the Twitch API and how to work with them in **Ryoshi**. you can check
-out the project's [Wiki](linkhere)
+out the project's [Wiki](https://github.com/zunix/Ryoshi/wiki)
 
 
 ###Currently supported Twitch API Endpoints
