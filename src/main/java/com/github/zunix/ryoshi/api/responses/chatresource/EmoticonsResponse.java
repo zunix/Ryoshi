@@ -14,18 +14,27 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.zunix.ryoshi.api.models.links;
+package com.github.zunix.ryoshi.api.responses.chatresource;
 
-public class ChannelLink {
+import com.google.gson.annotations.SerializedName;
 
-  private String self;
-  private String channel;
+import com.github.zunix.ryoshi.api.models.Emoticon;
+import com.github.zunix.ryoshi.api.models.links.SelfLink;
 
-  public String getSelf() {
-    return self;
+import java.util.ArrayList;
+import java.util.List;
+
+public class EmoticonsResponse {
+
+  @SerializedName("_links")
+  private SelfLink links;
+  private List<Emoticon> emoticons = new ArrayList<>();
+
+  public SelfLink getLinks() {
+    return links;
   }
 
-  public String getChannel() {
-    return channel;
+  public List<Emoticon> getEmoticons() {
+    return emoticons;
   }
 }

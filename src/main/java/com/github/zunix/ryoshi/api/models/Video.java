@@ -18,7 +18,7 @@ package com.github.zunix.ryoshi.api.models;
 
 import com.google.gson.annotations.SerializedName;
 
-import com.github.zunix.ryoshi.api.models.links.ChannelLink;
+import com.github.zunix.ryoshi.api.models.links.ChannelLinks;
 
 public class Video {
 
@@ -43,7 +43,7 @@ public class Video {
   @SerializedName("broadcast_type")
   private String broadcastType;
   @SerializedName("_links")
-  private ChannelLink links;
+  private ChannelLinks links;
   @SerializedName("channel")
   private UserChannel channel;
 
@@ -107,7 +107,7 @@ public class Video {
     return broadcastType;
   }
 
-  public ChannelLink getLinks() {
+  public ChannelLinks getLinks() {
     return links;
   }
 

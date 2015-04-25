@@ -14,24 +14,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.zunix.ryoshi.api.responses.streamsresource;
+package com.github.zunix.ryoshi.api.responses.chatresource;
 
 import com.google.gson.annotations.SerializedName;
 
-import com.github.zunix.ryoshi.api.models.Stream;
-import com.github.zunix.ryoshi.api.models.links.ChannelLinks;
+import com.github.zunix.ryoshi.api.models.links.ChatLinks;
 
-public class StreamResponse {
+public class ChatChannelNameResponse {
 
   @SerializedName("_links")
-  private ChannelLinks links;
-  private Stream stream;
+  private ChatLinks links;
 
-  public ChannelLinks getLinks() {
+  public ChatLinks getLinks() {
     return links;
-  }
-
-  public Stream getStream() {
-    return stream;
   }
 }

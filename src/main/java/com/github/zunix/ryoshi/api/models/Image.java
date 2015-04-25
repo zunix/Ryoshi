@@ -14,24 +14,31 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.zunix.ryoshi.api.responses.streamsresource;
+package com.github.zunix.ryoshi.api.models;
 
 import com.google.gson.annotations.SerializedName;
 
-import com.github.zunix.ryoshi.api.models.Stream;
-import com.github.zunix.ryoshi.api.models.links.ChannelLinks;
+public class Image {
 
-public class StreamResponse {
+  @SerializedName("emoticon_set")
+  private String emoticonSet;
+  private int height;
+  private int width;
+  private String url;
 
-  @SerializedName("_links")
-  private ChannelLinks links;
-  private Stream stream;
-
-  public ChannelLinks getLinks() {
-    return links;
+  public String getEmoticonSet() {
+    return emoticonSet;
   }
 
-  public Stream getStream() {
-    return stream;
+  public int getHeight() {
+    return height;
+  }
+
+  public int getWidth() {
+    return width;
+  }
+
+  public String getUrl() {
+    return url;
   }
 }

@@ -16,6 +16,46 @@
  */
 package com.github.zunix.ryoshi.api.resources;
 
+import com.github.zunix.ryoshi.api.responses.chatresource.BadgesResponse;
+import com.github.zunix.ryoshi.api.responses.chatresource.ChatChannelNameResponse;
+import com.github.zunix.ryoshi.api.responses.chatresource.EmoticonsResponse;
+
+import retrofit.http.GET;
+import retrofit.http.Path;
+
 public interface ChatResource {
 
+  /*
+    Chat Resource
+    API Reference: https://github.com/justintv/Twitch-API/blob/master/v3_resources/chat.md
+
+  */
+
+  /**
+   * Requests links to all other chat endpoints.
+   *
+   * @param channelName Channel Name
+   * @return Returns a links object to all other chat endpoints.
+   */
+  @GET("/chat/{channelName}")
+  ChatChannelNameResponse getChatEndpointsByChannelName(@Path("channelName") String channelName);
+
+
+  /**
+   * Requests all Twitch emoticons information.
+   *
+   * @return Returns a list of all emoticon objects for Twitch.
+   */
+  @GET("/chat/emoticons")
+  EmoticonsResponse getAllEmoticons();
+
+
+  /**
+   * Requests a list of chat badges from a specific Channel.
+   *
+   * @param channelName Channel Name
+   * @return Returns a list of chat badges that can be used in the :channel's chat.
+   */
+  @GET("/chat/{channelName}/badges")
+  BadgesResponse getBadgesByChannelName(@Path("channelName") String channelName);
 }

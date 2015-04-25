@@ -14,24 +14,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.zunix.ryoshi.api.responses.streamsresource;
+package com.github.zunix.ryoshi.api.models;
 
-import com.google.gson.annotations.SerializedName;
+import java.util.ArrayList;
+import java.util.List;
 
-import com.github.zunix.ryoshi.api.models.Stream;
-import com.github.zunix.ryoshi.api.models.links.ChannelLinks;
+public class Emoticon {
 
-public class StreamResponse {
+  private String regex;
+  private List<Image> images = new ArrayList<>();
 
-  @SerializedName("_links")
-  private ChannelLinks links;
-  private Stream stream;
-
-  public ChannelLinks getLinks() {
-    return links;
+  public String getRegex() {
+    return regex;
   }
 
-  public Stream getStream() {
-    return stream;
+  public List<Image> getImages() {
+    return images;
   }
 }
