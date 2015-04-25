@@ -126,13 +126,13 @@ out the project's [Wiki](https://github.com/zunix/Ryoshi/wiki)
 - ~~Follows~~
 - ~~Games~~
 - Ingests
-- ~~Root~~
+- Root
 - ~~Search~~
 - ~~Streams~~
 - ~~Subscriptions~~
-- ~~Teams~~
-- ~~Users~~
-- ~~Videos~~
+- Teams
+- Users
+- Videos
 
 License
 =======

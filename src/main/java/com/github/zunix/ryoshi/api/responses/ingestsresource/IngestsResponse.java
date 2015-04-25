@@ -27,11 +27,11 @@ import java.util.List;
 public class IngestsResponse {
 
   @SerializedName("_links")
-  private SearchLinks searchLinks;
+  private SearchLinks links;
   private List<Ingest> ingests = new ArrayList<>();
 
-  public SearchLinks getSearchLinks() {
-    return searchLinks;
+  public SearchLinks getLinks() {
+    return links;
   }
 
   public List<Ingest> getIngests() {

@@ -18,6 +18,10 @@ package com.github.zunix.ryoshi;
 
 import com.github.zunix.ryoshi.api.errorhandlers.TwitchErrorHandler;
 import com.github.zunix.ryoshi.api.resources.IngestsResource;
+import com.github.zunix.ryoshi.api.resources.RootResource;
+import com.github.zunix.ryoshi.api.resources.TeamResource;
+import com.github.zunix.ryoshi.api.resources.UsersResource;
+import com.github.zunix.ryoshi.api.resources.VideosResource;
 
 import retrofit.RequestInterceptor;
 import retrofit.RestAdapter;
@@ -26,7 +30,6 @@ public class Ryoshi {
 
   private String clientID;
   private String accessToken;
-  private RestAdapter.LogLevel logLevel;
   private final String twitchAPIBaseURL = "https://api.twitch.tv/kraken";
   private final RequestInterceptor requestInterceptor = new RequestInterceptor() {
     @Override
@@ -41,28 +44,32 @@ public class Ryoshi {
       }
     }
   };
-  private RestAdapter simpelRestAdapter = new RestAdapter.Builder()
+  private RestAdapter restAdapter = new RestAdapter.Builder()
       .setEndpoint(twitchAPIBaseURL)
       .setRequestInterceptor(requestInterceptor)
       .setErrorHandler(new TwitchErrorHandler())
       .build();
 
   private IngestsResource ingestsResource;
+  private TeamResource teamResource;
+  private VideosResource videosResource;
+  private RootResource rootResource;
+  private UsersResource usersResource;
 
 
   public Ryoshi() {
-    ingestsResource = getAdapter().create(IngestsResource.class);
+    initResources();
   }
 
   public Ryoshi(String clientID) {
     this.clientID = clientID;
-    ingestsResource = getAdapter().create(IngestsResource.class);
+    initResources();
   }
 
   public Ryoshi(String clientID, String accessToken) {
     this.accessToken = accessToken;
     this.clientID = clientID;
-    ingestsResource = getAdapter().create(IngestsResource.class);
+    initResources();
   }
 
 
@@ -72,15 +79,36 @@ public class Ryoshi {
    */
   public IngestsResource ingests() { return ingestsResource; }
 
-
+  /**
+   *
+   * @return TeamResource Interface
+   */
+  public TeamResource team() { return teamResource; }
 
   /**
-   * Returns a RestAdapter.
    *
-   * @return RestAdapter
+   * @return VideosResource Interface
    */
-  private RestAdapter getAdapter() {
-    return simpelRestAdapter;
+  public VideosResource videos() { return videosResource; }
+
+  /**
+   *
+   * @return RootResource Interface
+   */
+  public RootResource root() { return rootResource; }
+
+  /**
+   *
+   * @return UsersResource Interface
+   */
+  public UsersResource users() { return usersResource; }
+
+  private void initResources() {
+    ingestsResource = restAdapter.create(IngestsResource.class);
+    teamResource = restAdapter.create(TeamResource.class);
+    videosResource = restAdapter.create(VideosResource.class);
+    rootResource = restAdapter.create(RootResource.class);
+    usersResource = restAdapter.create(UsersResource.class);
   }
 
 
