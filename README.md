@@ -135,7 +135,7 @@ out the project's [Wiki](https://github.com/zunix/Ryoshi/wiki)
 - [Chat](https://github.com/zunix/Ryoshi/wiki/Chat-Endpoint)
 - ~~Follows~~
 - [Games](https://github.com/zunix/Ryoshi/wiki/Games-Endpoint)
-- [Ingests](https://github.com/zunix/Ryoshi/wiki/Games-Endpoint)
+- [Ingests](https://github.com/zunix/Ryoshi/wiki/Ingests-Endpoint)
 - [Root](https://github.com/zunix/Ryoshi/wiki/Root-Endpoint)
 - ~~Search~~
 - [Streams](https://github.com/zunix/Ryoshi/wiki/Streams-Endpoint)
