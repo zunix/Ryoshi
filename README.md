@@ -79,7 +79,7 @@ Ryoshi ryoshi = new Ryoshi(clientID, accessToken, false);
 #####Logging
 
 If you want enable logging in order to see what **Ryoshi** is sending / retrieving, just
-initialize **Ryoshi** like this.
+initialize like this.
 
 ```java
 
@@ -130,19 +130,19 @@ out the project's [Wiki](https://github.com/zunix/Ryoshi/wiki)
 
 ###Currently supported Twitch API Endpoints
 
-- Blocks
+- [Blocks](https://github.com/zunix/Ryoshi/wiki/Blocks-Endpoint)
 - ~~Channels~~
-- Chat
+- [Chat](https://github.com/zunix/Ryoshi/wiki/Chat-Endpoint)
 - ~~Follows~~
-- Games
-- Ingests
-- Root
+- [Games](https://github.com/zunix/Ryoshi/wiki/Games-Endpoint)
+- [Ingests](https://github.com/zunix/Ryoshi/wiki/Games-Endpoint)
+- [Root](https://github.com/zunix/Ryoshi/wiki/Root-Endpoint)
 - ~~Search~~
-- Streams
+- [Streams](https://github.com/zunix/Ryoshi/wiki/Streams-Endpoint)
 - ~~Subscriptions~~
-- Teams
-- Users
-- Videos
+- [Teams](https://github.com/zunix/Ryoshi/wiki/Teams-Endpoint)
+- [Users](https://github.com/zunix/Ryoshi/wiki/Users-Endpoint)
+- [Videos](https://github.com/zunix/Ryoshi/wiki/Videos-Endpoint)
 
 License
 =======
