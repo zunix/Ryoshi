@@ -15,7 +15,7 @@ the HTTP communication and JSON serialization.
 ##Installation
 
 
-###JAR
+###JAR (currently not available)
 
 1. Download `Ryoshi-<version>.zip`.
 
@@ -78,7 +78,14 @@ Ryoshi ryoshi = new Ryoshi(clientID, accessToken, false);
 
 #####Logging
 
-**not done**
+If you want enable logging in order to see what **Ryoshi** is sending / retrieving, just
+initialize **Ryoshi** like this.
+
+```java
+
+Ryoshi ryoshi = new Ryoshi(true);
+
+```
 
 ###Requesting data from the Twitch API.
 
@@ -123,7 +130,7 @@ out the project's [Wiki](https://github.com/zunix/Ryoshi/wiki)
 
 ###Currently supported Twitch API Endpoints
 
-- ~~Blocks~~
+- Blocks
 - ~~Channels~~
 - Chat
 - ~~Follows~~
